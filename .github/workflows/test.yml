@@ -1,0 +1,78 @@
+name: Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Build & Test
+    runs-on: macos-15
+
+    env:
+      SCHEME: "AgentWatch Watch App"
+      PROJECT: AgentWatch.xcodeproj
+      SDK: watchsimulator
+      DESTINATION: "platform=watchOS Simulator,name=Apple Watch Series 10 (46mm)"
+      XCODE_VERSION: "16.2"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select Xcode ${{ env.XCODE_VERSION }}
+        run: sudo xcode-select -s /Applications/Xcode_${XCODE_VERSION}.app/Contents/Developer
+
+      - name: Show build settings
+        run: |
+          xcodebuild -version
+          xcodebuild -project "$PROJECT" -scheme "$SCHEME" -showdestinations 2>/dev/null | head -20 || true
+
+      - name: Build
+        run: |
+          xcodebuild build \
+            -project "$PROJECT" \
+            -scheme "$SCHEME" \
+            -sdk "$SDK" \
+            -destination "$DESTINATION" \
+            CODE_SIGN_IDENTITY=- \
+            AD_HOC_CODE_SIGNING_ALLOWED=YES \
+            | xcpretty && exit ${PIPESTATUS[0]}
+
+      - name: Test
+        run: |
+          xcodebuild test \
+            -project "$PROJECT" \
+            -scheme "$SCHEME" \
+            -sdk "$SDK" \
+            -destination "$DESTINATION" \
+            CODE_SIGN_IDENTITY=- \
+            AD_HOC_CODE_SIGNING_ALLOWED=YES \
+            -enableCodeCoverage YES \
+            -resultBundlePath results.xcresult \
+            | xcpretty && exit ${PIPESTATUS[0]}
+
+      - name: Code coverage summary
+        if: always()
+        run: |
+          if [ -d results.xcresult ]; then
+            echo "### Code Coverage" >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+            xcrun xccov view --report results.xcresult >> "$GITHUB_STEP_SUMMARY" 2>/dev/null || echo "Coverage data unavailable" >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: results.xcresult
+          if-no-files-found: ignore
+          retention-days: 14

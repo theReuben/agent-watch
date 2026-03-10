@@ -14,7 +14,7 @@ An Apple Watch app to monitor and interact with AI coding agents — starting wi
 
 - watchOS 10.0+
 - Xcode 15.4+
-- Swift 5.0+
+- Swift 5.5+
 - A GitHub personal access token with `repo` scope
 
 ## Getting Started

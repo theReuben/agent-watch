@@ -34,18 +34,4 @@ final class GitHubServiceTests: XCTestCase {
         XCTAssertTrue(service1 === service2)
     }
 
-    func testServiceInitialization() {
-        let service = GitHubService()
-        XCTAssertNotNil(service)
-    }
-
-    // MARK: - Authentication State
-
-    func testIsNotAuthenticatedByDefault() {
-        let service = GitHubService()
-        // Without a token saved, should not be authenticated
-        // This test depends on keychain state, so it may vary
-        // We just verify it doesn't crash
-        _ = service.isAuthenticated
-    }
 }

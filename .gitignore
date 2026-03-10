@@ -32,3 +32,6 @@ Carthage/Build/
 .DS_Store
 *.swp
 *~
+
+# Test artifacts
+TestResults.xcresult

@@ -1,0 +1,55 @@
+name: Build & Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-test:
+    name: Build & Test (watchOS)
+    runs-on: macos-15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode_16.2.app/Contents/Developer
+
+      - name: Show build environment
+        run: |
+          xcodebuild -version
+          xcodebuild -showsdks | grep watch
+          xcrun simctl list devices available | grep -i "watch"
+
+      - name: Build
+        run: |
+          xcodebuild build-for-testing \
+            -project AgentWatch.xcodeproj \
+            -scheme "AgentWatch Watch App" \
+            -destination 'platform=watchOS Simulator,name=Apple Watch Series 10 (46mm)' \
+            -quiet
+
+      - name: Test
+        run: |
+          xcodebuild test \
+            -project AgentWatch.xcodeproj \
+            -scheme "AgentWatch Watch App" \
+            -destination 'platform=watchOS Simulator,name=Apple Watch Series 10 (46mm)' \
+            -resultBundlePath TestResults.xcresult \
+            -enableCodeCoverage YES \
+            -quiet
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: TestResults
+          path: TestResults.xcresult
+          retention-days: 7

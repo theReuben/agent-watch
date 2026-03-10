@@ -46,6 +46,37 @@ On first launch you'll be shown the Settings screen:
 2. Enter the **default repository** in `owner/repo` format (e.g., `octocat/Hello-World`)
 3. Tap **Save**
 
+## Testing
+
+### Run tests in Xcode
+
+1. Open `AgentWatch.xcodeproj`
+2. Press **⌘U** to build and run all tests
+
+### Run tests from the command line
+
+```bash
+# Build and run tests (with xcbeautify for readable output)
+make test
+
+# Build only (no tests)
+make build
+
+# Clean build artifacts
+make clean
+```
+
+> **Tip:** Install [xcbeautify](https://github.com/cpisciotta/xcbeautify) (`brew install xcbeautify`) for nicer xcodebuild output. The Makefile falls back to raw output if it's not installed.
+
+### Continuous Integration
+
+Every push to `main` and every pull request automatically triggers the **Build & Test** workflow (`.github/workflows/test.yml`). The workflow:
+
+- Builds the watchOS app
+- Runs all unit tests on a watchOS Simulator
+- Collects code coverage
+- Uploads the `.xcresult` bundle as an artifact for inspection
+
 ## Project Structure
 
 ```

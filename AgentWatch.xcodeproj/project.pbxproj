@@ -1,0 +1,594 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02BA37745A7442D9BE842013 /* AgentWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F53A521956D4E879E39E51C /* AgentWatchApp.swift */; };
+		B0004946EEA141BEA299BAB6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE2F5D054142BDBDF68D7F /* ContentView.swift */; };
+		578F782C44614C8F85BF4879 /* Agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88BA6C535F04DC3BC9FDECB /* Agent.swift */; };
+		8EF7A3867BDE4FE488F84050 /* AgentSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FB81E6624A4BAEA3DA4681 /* AgentSession.swift */; };
+		6872D62E4F914B60A1E8804B /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFDF368AB57461CB0191271 /* Issue.swift */; };
+		94A9AD80F4E345C49D40E2CE /* PullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAABD5BAEA04482A07DCE61 /* PullRequest.swift */; };
+		B8696347D5694748B8E2A052 /* GitHubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AA1FFD03014A328AFB5E49 /* GitHubRepository.swift */; };
+		80F4A147DAAE4280BDD3D01D /* GitHubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04C7CF9133C43DDA8FFA1FB /* GitHubService.swift */; };
+		59A877DAF4554F77B6B105CF /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392B3F3A8C10426F806EC96F /* KeychainService.swift */; };
+		DC88EEEF7E034A2F883E6848 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49711E89AC8649298FC31D09 /* DashboardView.swift */; };
+		19A09A7D7C204D949F0F60D5 /* SessionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC954345ABDE418E945E659D /* SessionListView.swift */; };
+		BAF838FCA8BE4B97A2CC6A9D /* SessionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7147D8D045431983AA3949 /* SessionDetailView.swift */; };
+		5B1B459A85A74A67BC886DFC /* CreateSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E855CE5530C2441A8EDDF0C0 /* CreateSessionView.swift */; };
+		EEB7481E05C04D7683E73D66 /* IssueListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1051F0EAB6CD4557891B1BBE /* IssueListView.swift */; };
+		646E705826B747C890EA0511 /* AssignCopilotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F20A31FD85E4372A605AB57 /* AssignCopilotView.swift */; };
+		665D1F0F26BB41E085BC7AFB /* PRListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0981EB5F345D4E3997318B58 /* PRListView.swift */; };
+		4FA8FF1FA60B48AD9D623BCE /* PRDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A56EFE22A634A35B255E68F /* PRDetailView.swift */; };
+		BA03E4E9302B46C491E48ECD /* PRReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B7D169D86C41718C591F39 /* PRReviewView.swift */; };
+		93D9C136193140C1AFEE1B03 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A06498C064F5995FBD815 /* SettingsView.swift */; };
+		AF5D630A532A4CB7A94E3022 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FB8B8F1DE4F4C5E990C4C2C /* Assets.xcassets */; };
+		B3960A100B1E423FA5261AEF /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF962AA30D0A44A79A33B9DB /* ModelTests.swift */; };
+		A455C7EF52DD4573945E47AC /* GitHubServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F8F66ACEB448D0B38B37A4 /* GitHubServiceTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3357F6B3B98642078BBC887C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 396E59E98BA842F3831EE67B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 887B89E260774458A524C2F9;
+			remoteInfo = "AgentWatch Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0F53A521956D4E879E39E51C /* AgentWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentWatchApp.swift; sourceTree = "<group>"; };
+		D4FE2F5D054142BDBDF68D7F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F88BA6C535F04DC3BC9FDECB /* Agent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agent.swift; sourceTree = "<group>"; };
+		78FB81E6624A4BAEA3DA4681 /* AgentSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentSession.swift; sourceTree = "<group>"; };
+		CFFDF368AB57461CB0191271 /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
+		AAAABD5BAEA04482A07DCE61 /* PullRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequest.swift; sourceTree = "<group>"; };
+		31AA1FFD03014A328AFB5E49 /* GitHubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepository.swift; sourceTree = "<group>"; };
+		A04C7CF9133C43DDA8FFA1FB /* GitHubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubService.swift; sourceTree = "<group>"; };
+		392B3F3A8C10426F806EC96F /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		49711E89AC8649298FC31D09 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		FC954345ABDE418E945E659D /* SessionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionListView.swift; sourceTree = "<group>"; };
+		1F7147D8D045431983AA3949 /* SessionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDetailView.swift; sourceTree = "<group>"; };
+		E855CE5530C2441A8EDDF0C0 /* CreateSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSessionView.swift; sourceTree = "<group>"; };
+		1051F0EAB6CD4557891B1BBE /* IssueListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueListView.swift; sourceTree = "<group>"; };
+		8F20A31FD85E4372A605AB57 /* AssignCopilotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignCopilotView.swift; sourceTree = "<group>"; };
+		0981EB5F345D4E3997318B58 /* PRListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRListView.swift; sourceTree = "<group>"; };
+		5A56EFE22A634A35B255E68F /* PRDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRDetailView.swift; sourceTree = "<group>"; };
+		62B7D169D86C41718C591F39 /* PRReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRReviewView.swift; sourceTree = "<group>"; };
+		CE7A06498C064F5995FBD815 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		0FB8B8F1DE4F4C5E990C4C2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5ED122B6747745DF90F81C52 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E7E4DA6FEC614B60AEAA05B6 /* AgentWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AgentWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D6CF0D5CC764207A5BDF322 /* AgentWatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgentWatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF962AA30D0A44A79A33B9DB /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
+		A5F8F66ACEB448D0B38B37A4 /* GitHubServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubServiceTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FD7C1AC5060B4682962FCB06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FE3BB7D06224657A1A4E9BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18E6C10E505E4780B6616B72 = {
+			isa = PBXGroup;
+			children = (
+				6ACDAF02F52048BEB8878725 /* AgentWatch Watch App */,
+				0BC8EF4CF6504AFA95676F39 /* AgentWatchTests */,
+				654976ACFAF14482B01A1148 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		654976ACFAF14482B01A1148 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E7E4DA6FEC614B60AEAA05B6 /* AgentWatch Watch App.app */,
+				7D6CF0D5CC764207A5BDF322 /* AgentWatchTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6ACDAF02F52048BEB8878725 /* AgentWatch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				0F53A521956D4E879E39E51C /* AgentWatchApp.swift */,
+				D4FE2F5D054142BDBDF68D7F /* ContentView.swift */,
+				A64D5469D5544E238ADDECF1 /* Models */,
+				F25D9EBB17F64730A107D964 /* Services */,
+				3673B0C5474D416886E39673 /* Views */,
+				0FB8B8F1DE4F4C5E990C4C2C /* Assets.xcassets */,
+				704CF8D60116405EA887F652 /* Preview Content */,
+			);
+			path = "AgentWatch Watch App";
+			sourceTree = "<group>";
+		};
+		A64D5469D5544E238ADDECF1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F88BA6C535F04DC3BC9FDECB /* Agent.swift */,
+				78FB81E6624A4BAEA3DA4681 /* AgentSession.swift */,
+				CFFDF368AB57461CB0191271 /* Issue.swift */,
+				AAAABD5BAEA04482A07DCE61 /* PullRequest.swift */,
+				31AA1FFD03014A328AFB5E49 /* GitHubRepository.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F25D9EBB17F64730A107D964 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A04C7CF9133C43DDA8FFA1FB /* GitHubService.swift */,
+				392B3F3A8C10426F806EC96F /* KeychainService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3673B0C5474D416886E39673 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6DDD043766A4440E883A57AA /* Dashboard */,
+				7A820E868D2249E69723B770 /* Sessions */,
+				316DC50F28124C1C91A09804 /* Issues */,
+				31BE7C61041E433A93185373 /* PullRequests */,
+				8F430601247646DCAD47721A /* Settings */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6DDD043766A4440E883A57AA /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				49711E89AC8649298FC31D09 /* DashboardView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		7A820E868D2249E69723B770 /* Sessions */ = {
+			isa = PBXGroup;
+			children = (
+				FC954345ABDE418E945E659D /* SessionListView.swift */,
+				1F7147D8D045431983AA3949 /* SessionDetailView.swift */,
+				E855CE5530C2441A8EDDF0C0 /* CreateSessionView.swift */,
+			);
+			path = Sessions;
+			sourceTree = "<group>";
+		};
+		316DC50F28124C1C91A09804 /* Issues */ = {
+			isa = PBXGroup;
+			children = (
+				1051F0EAB6CD4557891B1BBE /* IssueListView.swift */,
+				8F20A31FD85E4372A605AB57 /* AssignCopilotView.swift */,
+			);
+			path = Issues;
+			sourceTree = "<group>";
+		};
+		31BE7C61041E433A93185373 /* PullRequests */ = {
+			isa = PBXGroup;
+			children = (
+				0981EB5F345D4E3997318B58 /* PRListView.swift */,
+				5A56EFE22A634A35B255E68F /* PRDetailView.swift */,
+				62B7D169D86C41718C591F39 /* PRReviewView.swift */,
+			);
+			path = PullRequests;
+			sourceTree = "<group>";
+		};
+		8F430601247646DCAD47721A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				CE7A06498C064F5995FBD815 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		704CF8D60116405EA887F652 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5ED122B6747745DF90F81C52 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0BC8EF4CF6504AFA95676F39 /* AgentWatchTests */ = {
+			isa = PBXGroup;
+			children = (
+				BF962AA30D0A44A79A33B9DB /* ModelTests.swift */,
+				A5F8F66ACEB448D0B38B37A4 /* GitHubServiceTests.swift */,
+			);
+			path = AgentWatchTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		887B89E260774458A524C2F9 /* AgentWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65CAC72143A54493BAD9D6E6 /* Build configuration list for PBXNativeTarget "AgentWatch Watch App" */;
+			buildPhases = (
+				342B2B103A60406A826A6FD6 /* Sources */,
+				FD7C1AC5060B4682962FCB06 /* Frameworks */,
+				7061E79AA12D4D75B05DBE03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AgentWatch Watch App";
+			productName = "AgentWatch Watch App";
+			productReference = E7E4DA6FEC614B60AEAA05B6 /* AgentWatch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		826A7158D2344D85B3DF7E0F /* AgentWatchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAD550AD9B2F4554BDBE4DE9 /* Build configuration list for PBXNativeTarget "AgentWatchTests" */;
+			buildPhases = (
+				38BC050669D94F0B95CC365F /* Sources */,
+				1FE3BB7D06224657A1A4E9BA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9D1A3E32A5CA4AD99D96D3DE /* PBXTargetDependency */,
+			);
+			name = AgentWatchTests;
+			productName = AgentWatchTests;
+			productReference = 7D6CF0D5CC764207A5BDF322 /* AgentWatchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		396E59E98BA842F3831EE67B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					887B89E260774458A524C2F9 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					826A7158D2344D85B3DF7E0F = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 887B89E260774458A524C2F9;
+					};
+				};
+			};
+			buildConfigurationList = 1C996F414C7C49C1BD4974D7 /* Build configuration list for PBXProject "AgentWatch" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18E6C10E505E4780B6616B72;
+			productRefGroup = 654976ACFAF14482B01A1148 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				887B89E260774458A524C2F9 /* AgentWatch Watch App */,
+				826A7158D2344D85B3DF7E0F /* AgentWatchTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7061E79AA12D4D75B05DBE03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF5D630A532A4CB7A94E3022 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		342B2B103A60406A826A6FD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02BA37745A7442D9BE842013 /* AgentWatchApp.swift in Sources */,
+				B0004946EEA141BEA299BAB6 /* ContentView.swift in Sources */,
+				578F782C44614C8F85BF4879 /* Agent.swift in Sources */,
+				8EF7A3867BDE4FE488F84050 /* AgentSession.swift in Sources */,
+				6872D62E4F914B60A1E8804B /* Issue.swift in Sources */,
+				94A9AD80F4E345C49D40E2CE /* PullRequest.swift in Sources */,
+				B8696347D5694748B8E2A052 /* GitHubRepository.swift in Sources */,
+				80F4A147DAAE4280BDD3D01D /* GitHubService.swift in Sources */,
+				59A877DAF4554F77B6B105CF /* KeychainService.swift in Sources */,
+				DC88EEEF7E034A2F883E6848 /* DashboardView.swift in Sources */,
+				19A09A7D7C204D949F0F60D5 /* SessionListView.swift in Sources */,
+				BAF838FCA8BE4B97A2CC6A9D /* SessionDetailView.swift in Sources */,
+				5B1B459A85A74A67BC886DFC /* CreateSessionView.swift in Sources */,
+				EEB7481E05C04D7683E73D66 /* IssueListView.swift in Sources */,
+				646E705826B747C890EA0511 /* AssignCopilotView.swift in Sources */,
+				665D1F0F26BB41E085BC7AFB /* PRListView.swift in Sources */,
+				4FA8FF1FA60B48AD9D623BCE /* PRDetailView.swift in Sources */,
+				BA03E4E9302B46C491E48ECD /* PRReviewView.swift in Sources */,
+				93D9C136193140C1AFEE1B03 /* SettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38BC050669D94F0B95CC365F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3960A100B1E423FA5261AEF /* ModelTests.swift in Sources */,
+				A455C7EF52DD4573945E47AC /* GitHubServiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9D1A3E32A5CA4AD99D96D3DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 887B89E260774458A524C2F9 /* AgentWatch Watch App */;
+			targetProxy = 3357F6B3B98642078BBC887C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4D8B5BF04A9C492595B13632 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSTCOMPILER_COMPILATION_CONDITIONS = DEBUG;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		982A76A76A2F4BEB9DC28440 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		F8C40A4EB3D3438AB5ADEBB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSTCOMPILER_COMPILATION_CONDITIONS = DEBUG;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AgentWatch Watch App/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = AgentWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.agentwatch.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		A7E9A97128134804AE219DC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AgentWatch Watch App/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = AgentWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.agentwatch.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		7C03F5DCB42A465BBF789C24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.agentwatch.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AgentWatch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AgentWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		B151901A967C4FD3B9B4DCAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.agentwatch.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AgentWatch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AgentWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1C996F414C7C49C1BD4974D7 /* Build configuration list for PBXProject "AgentWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D8B5BF04A9C492595B13632 /* Debug */,
+				982A76A76A2F4BEB9DC28440 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65CAC72143A54493BAD9D6E6 /* Build configuration list for PBXNativeTarget "AgentWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8C40A4EB3D3438AB5ADEBB4 /* Debug */,
+				A7E9A97128134804AE219DC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAD550AD9B2F4554BDBE4DE9 /* Build configuration list for PBXNativeTarget "AgentWatchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C03F5DCB42A465BBF789C24 /* Debug */,
+				B151901A967C4FD3B9B4DCAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = 396E59E98BA842F3831EE67B /* Project object */;
+}

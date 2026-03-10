@@ -10,7 +10,7 @@
 SCHEME   := AgentWatch Watch App
 PROJECT  := AgentWatch.xcodeproj
 SDK      := watchsimulator
-DEST     := platform=watchOS Simulator,name=Apple Watch Series 10 (46mm)
+DEST     := generic/platform=watchOS Simulator
 XCARGS   := -project "$(PROJECT)" -scheme "$(SCHEME)" -sdk $(SDK) -destination '$(DEST)'
 
 .DEFAULT_GOAL := help

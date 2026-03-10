@@ -22,7 +22,7 @@ jobs:
       SCHEME: "AgentWatch Watch App"
       PROJECT: AgentWatch.xcodeproj
       SDK: watchsimulator
-      DESTINATION: "platform=watchOS Simulator,name=Apple Watch Series 10 (46mm)"
+      DESTINATION: "generic/platform=watchOS Simulator"
       XCODE_VERSION: "16.2"
 
     steps:
@@ -31,29 +31,6 @@ jobs:
 
       - name: Select Xcode ${{ env.XCODE_VERSION }}
         run: sudo xcode-select -s /Applications/Xcode_${XCODE_VERSION}.app/Contents/Developer
-
-      - name: Prepare watchOS Simulator
-        run: |
-          xcodebuild -version
-          # Download watchOS simulator runtime (may already be present)
-          xcodebuild -downloadPlatform watchOS
-          # Determine the latest available watchOS runtime
-          RUNTIME=$(xcrun simctl list runtimes -j | python3 -c "
-          import sys, json
-          rts = [r for r in json.load(sys.stdin)['runtimes']
-                 if 'watchOS' in r.get('name','') and r.get('isAvailable')]
-          print(rts[-1]['identifier'] if rts else '')
-          ")
-          if [ -z "$RUNTIME" ]; then
-            echo "::error::No watchOS simulator runtime found"
-            exit 1
-          fi
-          echo "Using runtime: $RUNTIME"
-          # Create the simulator device used by DESTINATION
-          xcrun simctl create 'Apple Watch Series 10 (46mm)' \
-            'com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-10-46mm' \
-            "$RUNTIME" || true
-          xcrun simctl list devices watchOS
 
       - name: Build
         run: |

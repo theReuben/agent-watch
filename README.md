@@ -36,7 +36,7 @@ Every push and pull request to `main` triggers the **Test** workflow (`.github/w
 
 1. Builds the app on macOS with Xcode
 2. Runs the full test suite with code coverage enabled
-3. Posts a coverage summary to the PR's **Actions** tab
+3. Posts a coverage summary to the workflow run's step summary
 4. Uploads the `.xcresult` bundle as an artifact for deeper inspection
 
 Redundant CI runs on the same branch are automatically cancelled so you get fast feedback.

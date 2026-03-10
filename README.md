@@ -17,6 +17,30 @@ An Apple Watch app to monitor and interact with AI coding agents — starting wi
 - Swift 5.5+
 - A GitHub personal access token with `repo` scope
 
+## Development
+
+A `Makefile` provides convenient shortcuts so you never need to remember `xcodebuild` flags:
+
+```bash
+make build      # compile for watchOS Simulator
+make test       # run unit tests
+make coverage   # run tests + print line-coverage summary
+make clean      # remove build artifacts
+make lint       # run SwiftLint (optional, install via `brew install swiftlint`)
+make help       # list all available targets
+```
+
+### Continuous Integration
+
+Every push and pull request to `main` triggers the **Test** workflow (`.github/workflows/test.yml`) which:
+
+1. Builds the app on macOS with Xcode
+2. Runs the full test suite with code coverage enabled
+3. Posts a coverage summary to the workflow run's step summary
+4. Uploads the `.xcresult` bundle as an artifact for deeper inspection
+
+Redundant CI runs on the same branch are automatically cancelled so you get fast feedback.
+
 ## Getting Started
 
 ### 1. Clone the repository

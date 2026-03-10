@@ -17,8 +17,9 @@ xcuserdata/
 *.dSYM.zip
 *.dSYM
 
-# Swift Package Manager
+# Swift Package Manager & local build artifacts
 .build/
+results.xcresult/
 Packages/
 Package.resolved
 

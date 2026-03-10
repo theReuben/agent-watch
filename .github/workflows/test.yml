@@ -32,13 +32,32 @@ jobs:
       - name: Select Xcode ${{ env.XCODE_VERSION }}
         run: sudo xcode-select -s /Applications/Xcode_${XCODE_VERSION}.app/Contents/Developer
 
-      - name: Show build settings
+      - name: Prepare watchOS Simulator
         run: |
           xcodebuild -version
-          xcodebuild -project "$PROJECT" -scheme "$SCHEME" -showdestinations 2>/dev/null | head -20 || true
+          # Download watchOS simulator runtime (may already be present)
+          xcodebuild -downloadPlatform watchOS
+          # Determine the latest available watchOS runtime
+          RUNTIME=$(xcrun simctl list runtimes -j | python3 -c "
+          import sys, json
+          rts = [r for r in json.load(sys.stdin)['runtimes']
+                 if 'watchOS' in r.get('name','') and r.get('isAvailable')]
+          print(rts[-1]['identifier'] if rts else '')
+          ")
+          if [ -z "$RUNTIME" ]; then
+            echo "::error::No watchOS simulator runtime found"
+            exit 1
+          fi
+          echo "Using runtime: $RUNTIME"
+          # Create the simulator device used by DESTINATION
+          xcrun simctl create 'Apple Watch Series 10 (46mm)' \
+            'com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-10-46mm' \
+            "$RUNTIME" || true
+          xcrun simctl list devices watchOS
 
       - name: Build
         run: |
+          set -o pipefail
           xcodebuild build \
             -project "$PROJECT" \
             -scheme "$SCHEME" \
@@ -46,10 +65,11 @@ jobs:
             -destination "$DESTINATION" \
             CODE_SIGN_IDENTITY=- \
             AD_HOC_CODE_SIGNING_ALLOWED=YES \
-            | xcpretty && exit ${PIPESTATUS[0]}
+            | xcpretty
 
       - name: Test
         run: |
+          set -o pipefail
           xcodebuild test \
             -project "$PROJECT" \
             -scheme "$SCHEME" \
@@ -59,7 +79,7 @@ jobs:
             AD_HOC_CODE_SIGNING_ALLOWED=YES \
             -enableCodeCoverage YES \
             -resultBundlePath results.xcresult \
-            | xcpretty && exit ${PIPESTATUS[0]}
+            | xcpretty
 
       - name: Code coverage summary
         if: always()
